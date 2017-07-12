@@ -29,19 +29,6 @@ Runs a set of tests.
 
 
 
-…or create a new repository on the command line
-
-echo "# rabbitmq_read" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/hbeimf/rabbitmq_read.git
-git push -u origin master
-…or push an existing repository from the command line
-
-git remote add origin https://github.com/hbeimf/rabbitmq_read.git
-git push -u origin master
-
 
 
 
