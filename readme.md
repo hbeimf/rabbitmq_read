@@ -1,34 +1,3 @@
-http://www.rabbitmq.com/build-server.html
-
-
-https://github.com/rabbitmq/rabbitmq-server
-
-
-
-
-Building the server
-
-Change to the rabbitmq-server directory, and type make.
-
-Other interesting Makefile targets include
-
-all
-The default target. Builds the server.
-shell
-Builds the client libraries and starts an Erlang shell with the libraries loaded.
-run-broker
-Builds the server and starts an instance with an interactive Erlang shell. This will by default put data, including a Mnesia database, in /tmp/rabbitmq-test-instances, but this location can be overridden by setting the Makefile variable TEST_TMPDIR:
-make run-broker TEST_TMPDIR=/some/other/location/for/rabbitmq-test-instances
-clean
-Removes temporary build products.
-distclean
-Removes all build products, including fetched dependencies.
-tests
-Runs a set of tests.
-
-
-
-
 
 
 wget http://www.rabbitmq.com/releases/rabbitmq-server/v3.6.10/rabbitmq-server-generic-unix-3.6.10.tar.xz
@@ -49,7 +18,11 @@ $ ./rabbitmq-plugins enable rabbitmq_management
 $ ./rabbitmq-server
 
 以守护进程启动mq
-$ ./rabbitmq-server –detached
+$ sudo ./rabbitmq-server -detached
+
+停止节点
+
+$ sudo ./rabbitmqctl stop
 
 ```
 
@@ -57,6 +30,19 @@ web管理页面
 
 http://127.0.0.1:15672/
 
+账号密码：
+guest guest
 
 
+可以创建管理员用户，负责整个MQ的运维，例如：
 
+$ ./rabbitmqctl add_user  admin  123456
+
+赋予其administrator角色：
+
+$ ./rabbitmqctl set_user_tags admin administrator
+
+
+查看users
+
+$ ./rabbitmqctl list_users
