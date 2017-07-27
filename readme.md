@@ -40,4 +40,15 @@ tar xvf ./rabbitmq-server-generic-unix-3.6.10.tar
 
 
 
+$ ./rabbitmq-plugins enable rabbitmq_management
+
+
+$ ./rabbitmq-server restart
+
+
+http://127.0.0.1:15672/
+
+
+
+
 
