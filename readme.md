@@ -39,15 +39,23 @@ xz -d ./rabbitmq-server-generic-unix-3.6.10.tar.xz
 tar xvf ./rabbitmq-server-generic-unix-3.6.10.tar
 
 
+```
+$ cd ./rabbitmq_server-3.6.10/sbin
 
+启动web插件
 $ ./rabbitmq-plugins enable rabbitmq_management
 
+启动mq
+$ ./rabbitmq-server
 
-$ ./rabbitmq-server restart
+以守护进程启动mq
+$ ./rabbitmq-server –detached
 
+```
+
+web管理页面
 
 http://127.0.0.1:15672/
-
 
 
 
