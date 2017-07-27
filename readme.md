@@ -31,9 +31,12 @@ Runs a set of tests.
 
 
 
+wget http://www.rabbitmq.com/releases/rabbitmq-server/v3.6.10/rabbitmq-server-generic-unix-3.6.10.tar.xz
 
 
+xz -d ./rabbitmq-server-generic-unix-3.6.10.tar.xz
 
+tar xvf ./rabbitmq-server-generic-unix-3.6.10.tar
 
 
 
