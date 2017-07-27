@@ -45,4 +45,10 @@ $ ./rabbitmqctl set_user_tags admin administrator
 
 查看users
 
-$ ./rabbitmqctl list_users
+```
+maomao@maomao-ThinkCentre-E73:/web/rabbitmq_read/rabbitmq_server-3.6.10/sbin$ ./rabbitmqctl list_users
+Listing users
+guest   [administrator]
+
+```
+
