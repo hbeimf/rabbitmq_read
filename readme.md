@@ -52,3 +52,8 @@ guest   [administrator]
 
 ```
 
+各种版本的客户端demo
+
+https://github.com/rabbitmq/rabbitmq-tutorials
+
+
